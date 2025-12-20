@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MaternalSafe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- Welcome Screen -->
+  <section id="welcome" class="screen active">
+    <h1>MaternalSafe</h1>
+    <p>Early warning system for safe pregnancy</p>
+    <button onclick="goTo('dashboard')">🤰 I am Pregnant</button>
+    <button onclick="goTo('healthWorker')">👩‍⚕️ I am a Health Worker</button>
+  </section>
+
+  <!-- Pregnant Dashboard -->
+  <section id="dashboard" class="screen">
+    <h2>Hello, Fatima (28 weeks)</h2>
+    <div class="status safe">🟢 You are currently safe</div>
+
+    <div class="grid">
+      <button onclick="goTo('symptoms')">🩸 Log Symptoms</button>
+      <button>❤️ My Health</button>
+      <button onclick="triggerEmergency()">🚨 Emergency Help</button>
+      <button>📅 Antenatal Visits</button>
+    </div>
+
+    <button class="back" onclick="goTo('welcome')">⬅ Back</button>
+  </section>
+
+  <!-- Symptom Check -->
+  <section id="symptoms" class="screen">
+    <h2>Symptom Check</h2>
+
+    <form id="symptomForm">
+      <label><input type="checkbox" value="bleeding"> Heavy Bleeding</label>
+      <label><input type="checkbox" value="headache"> Severe Headache</label>
+      <label><input type="checkbox" value="swelling"> Swollen Hands/Face</label>
+      <label><input type="checkbox" value="vision"> Blurred Vision</label>
+      <label><input type="checkbox" value="fever"> High Fever</label>
+      <label><input type="checkbox" value="pain"> Severe Pain</label>
+      <label><input type="checkbox" value="movement"> Baby Not Moving</label>
+      <label><input type="checkbox" value="convulsions"> Convulsions</label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <button class="back" onclick="goTo('dashboard')">⬅ Back</button>
+  </section>
+
+  <!-- Emergency Screen -->
+  <section id="emergency" class="screen emergency">
+    <h2>🚨 EMERGENCY ALERT</h2>
+    <p>You are at high risk. Please seek help immediately.</p>
+
+    <button>📞 Call Emergency</button>
+    <button>📍 Find Hospital</button>
+    <button>👩‍⚕️ Alert Health Worker</button>
+    <button>👪 Call Family</button>
+  </section>
+
+  <!-- Health Worker Dashboard -->
+  <section id="healthWorker" class="screen">
+    <h2>Health Worker Dashboard</h2>
+
+    <ul class="patients">
+      <li class="high">Aisha (32 wks) 🔴 High Risk</li>
+      <li class="warning">Zainab (24 wks) 🟡 Warning</li>
+      <li class="safe">Maryam (18 wks) 🟢 Low Risk</li>
+    </ul>
+
+    <button class="back" onclick="goTo('welcome')">⬅ Back</button>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
