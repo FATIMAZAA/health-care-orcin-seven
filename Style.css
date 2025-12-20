@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 420px;
+  margin: auto;
+  background: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.grid button {
+  background: #1976d2;
+  color: white;
+}
+
+.status.safe {
+  background: #d4edda;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  padding: 8px;
+}
+
+.emergency {
+  background: #ffebee;
+}
+
+.emergency button {
+  background: #d32f2f;
+  color: white;
+}
+
+.patients li {
+  list-style: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+}
+
+.high { background: #ffcdd2; }
+.warning { background: #fff9c4; }
+.safe { background: #c8e6c9; }
+
+.back {
+  background: #9e9e9e;
+  color: white;
+}
